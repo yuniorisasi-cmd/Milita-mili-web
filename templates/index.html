@@ -1,443 +1,288 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Perfumería Mili Milita</title>
-
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
-
 <body>
 
-
-    <!-- ==============================
-         HEADER
-         ============================== -->
-
+    <!-- HEADER -->
     <header class="header-principal">
-
         <div class="header-contenedor">
-
-
             <a href="/" class="logo-contenedor">
-
                 <img
                     src="{{ url_for('static', filename='images/logo.png') }}"
                     alt="Logo de Mili Milita"
                     class="logo"
                 >
-
             </a>
-
 
             <nav>
-
-                <a href="/" class="activo">
-                    Inicio
-                </a>
-
-                <a href="/productos">
-                    Productos
-                </a>
-
-                <a href="#promociones">
-                    Promociones
-                </a>
-
-                <a href="/marcas">
-                    Marcas
-                </a>
-
-                <a href="/contacto">
-                    Contacto
-                </a>
-
+                <a href="/" class="activo">Inicio</a>
+                <a href="/productos">Productos</a>
+                <a href="#promociones">Promociones</a>
+                <a href="/marcas">Marcas</a>
+                <a href="/contacto">Contacto</a>
             </nav>
-
-
         </div>
-
     </header>
 
-
-
-    <!-- ==============================
-         PORTADA PRINCIPAL
-         ============================== -->
-
+    <!-- PORTADA PRINCIPAL -->
     <section class="hero">
-
-
         <div class="hero-contenido">
+            <p class="hero-etiqueta">PERFUMERÍA MILI MILITA</p>
 
-
-            <p class="hero-etiqueta">
-                PERFUMERÍA MILI MILITA
-            </p>
-
-
-            <h1>
-                Belleza que<br>
-                va contigo.
-            </h1>
-
+            <h1>Belleza que<br>va contigo.</h1>
 
             <p class="hero-texto">
-
                 Perfumes, maquillaje y productos de cuidado personal
                 a precios de consultora.
-
             </p>
 
-
-            <a href="/productos" class="boton-hero">
-
-                Ver productos
-
-            </a>
-
-
+            <a href="/productos" class="boton-hero">Ver productos</a>
         </div>
 
-
-
         <div class="hero-productos">
-
-
             <div class="hero-tarjeta hero-tarjeta-1">
-
                 <img
                     src="{{ url_for('static', filename='images/kaiak_oceano.png') }}"
                     alt="Natura Kaiak Oceano"
                 >
-
             </div>
 
-
             <div class="hero-tarjeta hero-tarjeta-2">
-
                 <img
                     src="{{ url_for('static', filename='images/aceite_coco.png') }}"
                     alt="Avon Care Aceite de Coco"
                 >
-
             </div>
 
-
             <div class="hero-tarjeta hero-tarjeta-3">
-
                 <img
                     src="{{ url_for('static', filename='images/mascara_invisible.png') }}"
                     alt="Máscara Invisible"
                 >
-
             </div>
-
-
         </div>
-
-
     </section>
 
-
-
-    <!-- ==============================
-         PRESENTACIÓN
-         ============================== -->
-
+    <!-- PRESENTACIÓN -->
     <section class="presentacion">
-
-
-        <h2>
-            Encuentra lo que buscas
-        </h2>
-
-
+        <h2>Encuentra lo que buscas</h2>
         <p>
-
             Descubre productos de belleza, perfumes,
             maquillaje y cuidado personal.
-
         </p>
-
-
     </section>
 
-
-
-    <!-- ==============================
-         CATEGORÍAS
-         ============================== -->
-
+    <!-- CATEGORÍAS -->
     <section class="productos">
-
-
-        <h2>
-            Compra por categoría
-        </h2>
-
-
-        <p class="subtitulo">
-
-            Elige la categoría que quieres explorar.
-
-        </p>
-
-
+        <h2>Compra por categoría</h2>
+        <p class="subtitulo">Elige la categoría que quieres explorar.</p>
 
         <div class="productos-contenedor">
-
-
             <div class="producto">
-
-                <h3>
-                    Perfumes
-                </h3>
-
-                <p>
-                    Fragancias para diferentes estilos y ocasiones.
-                </p>
-
-                <a
-                    href="/productos"
-                    class="boton-producto"
-                >
-                    Ver perfumes
-                </a>
-
+                <h3>Perfumes</h3>
+                <p>Fragancias para diferentes estilos y ocasiones.</p>
+                <a href="/productos" class="boton-producto">Ver perfumes</a>
             </div>
 
-
-
             <div class="producto">
-
-                <h3>
-                    Maquillaje
-                </h3>
-
-                <p>
-                    Productos para complementar tu estilo y look.
-                </p>
-
-                <a
-                    href="/productos"
-                    class="boton-producto"
-                >
-                    Ver maquillaje
-                </a>
-
+                <h3>Maquillaje</h3>
+                <p>Productos para complementar tu estilo y look.</p>
+                <a href="/productos" class="boton-producto">Ver maquillaje</a>
             </div>
 
-
-
             <div class="producto">
-
-                <h3>
-                    Cuidado personal
-                </h3>
-
-                <p>
-                    Productos para cuidar tu piel y bienestar.
-                </p>
-
-                <a
-                    href="/productos"
-                    class="boton-producto"
-                >
-                    Ver productos
-                </a>
-
+                <h3>Cuidado personal</h3>
+                <p>Productos para cuidar tu piel y bienestar.</p>
+                <a href="/productos" class="boton-producto">Ver productos</a>
             </div>
-
-
         </div>
-
-
     </section>
 
-
-
-    <!-- ==============================
-         PROMOCIONES
-         ============================== -->
-
-    <section
-        class="promociones"
-        id="promociones"
-    >
-
-
-        <h2>
-            Promociones
-        </h2>
-
-
-        <p class="subtitulo">
-            Aprovecha nuestras ofertas especiales.
-        </p>
-
+    <!-- PROMOCIONES -->
+    <section class="promociones" id="promociones">
+        <h2>Promociones</h2>
+        <p class="subtitulo">Descubre nuestras ofertas especiales.</p>
 
         <div class="promociones-contenedor">
 
-
-            <!-- PROMOCIÓN 1 -->
-
+            <!-- PROMOCIÓN ANTERIOR: OSADÍA -->
             <div class="promocion">
-
                 <img
                     src="{{ url_for('static', filename='images/promociones/osadia.jpg') }}"
                     alt="Yanbal Osadía Eau de Parfum"
+                    loading="lazy"
                 >
-
-                <h3>
-                    Yanbal Osadía Eau de Parfum
-                </h3>
-
-                <strong>
-                    S/ 47.99
-                </strong>
-
+                <h3>Yanbal Osadía Eau de Parfum</h3>
+                <strong>S/ 47.99</strong>
                 <a
-                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20la%20promoción%20de%20Yanbal%20Osadía"
+                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20Yanbal%20Osad%C3%ADa"
                     class="boton-producto"
                     target="_blank"
-                >
-                    💬 Pedir por WhatsApp
-                </a>
-
+                    rel="noopener noreferrer"
+                >💬 Pedir por WhatsApp</a>
             </div>
 
-
-
-            <!-- PROMOCIÓN 2 -->
-
+            <!-- PROMOCIÓN ANTERIOR: HYDRA-LIP -->
             <div class="promocion">
-
                 <img
                     src="{{ url_for('static', filename='images/promociones/hydra_lip.peg.jpeg') }}"
                     alt="Yanbal Hydra-Lip V"
+                    loading="lazy"
                 >
-
-                <h3>
-                    Yanbal Hydra-Lip V
-                </h3>
-
-                <strong>
-                    S/ 15.99
-                </strong>
-
+                <h3>Yanbal Hydra-Lip V</h3>
+                <strong>S/ 15.99</strong>
                 <a
-                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20la%20promoción%20de%20Yanbal%20Hydra-Lip%20V"
+                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20Yanbal%20Hydra-Lip%20V"
                     class="boton-producto"
                     target="_blank"
-                >
-                    💬 Pedir por WhatsApp
-                </a>
-
+                    rel="noopener noreferrer"
+                >💬 Pedir por WhatsApp</a>
             </div>
 
-
-
-            <!-- PROMOCIÓN 3 -->
-
+            <!-- PROMOCIÓN ANTERIOR: MASCARILLA AVON -->
             <div class="promocion">
-
-                <img
-                    src="{{ url_for('static', filename='images/promociones/total_block.peg.jpeg') }}"
-                    alt="Yanbal Total Block SPF 100"
-                >
-
-                <h3>
-                    Yanbal Total Block SPF 100
-                </h3>
-
-                <strong>
-                    S/ 47.70
-                </strong>
-
-                <a
-                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20la%20promoción%20de%20Yanbal%20Total%20Block"
-                    class="boton-producto"
-                    target="_blank"
-                >
-                    💬 Pedir por WhatsApp
-                </a>
-
-            </div>
-
-
-
-            <!-- PROMOCIÓN 4 -->
-
-            <div class="promocion">
-
                 <img
                     src="{{ url_for('static', filename='images/promociones/mascarilla_avon.peg.jpeg') }}"
                     alt="Avon Care Mascarilla Facial 3 en 1"
+                    loading="lazy"
                 >
-
-                <h3>
-                    Avon Care Mascarilla Facial 3 en 1
-                </h3>
-
-                <strong>
-                    S/ 7.99
-                </strong>
-
+                <h3>Avon Care Mascarilla Facial 3 en 1</h3>
+                <strong>S/ 7.99</strong>
                 <a
-                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20la%20promoción%20de%20Avon%20Care%20Mascarilla%20Facial"
+                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20Avon%20Care%20Mascarilla%20Facial"
                     class="boton-producto"
                     target="_blank"
-                >
-                    💬 Pedir por WhatsApp
-                </a>
-
+                    rel="noopener noreferrer"
+                >💬 Pedir por WhatsApp</a>
             </div>
 
-
-
-            <!-- PROMOCIÓN 5 -->
-
+            <!-- PROMOCIÓN ANTERIOR: ARETES -->
             <div class="promocion">
-
                 <img
                     src="{{ url_for('static', filename='images/promociones/aretes.peg.jpeg') }}"
                     alt="Set de Aretes Lovely Hearts"
+                    loading="lazy"
                 >
-
-                <h3>
-                    Set de Aretes Lovely Hearts x4
-                </h3>
-
-                <strong>
-                    S/ 34.90
-                </strong>
-
+                <h3>Set de Aretes Lovely Hearts x4</h3>
+                <strong>S/ 34.90</strong>
                 <a
-                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20la%20promoción%20de%20los%20Aretes%20Lovely%20Hearts"
+                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20los%20Aretes%20Lovely%20Hearts"
                     class="boton-producto"
                     target="_blank"
-                >
-                    💬 Pedir por WhatsApp
-                </a>
-
+                    rel="noopener noreferrer"
+                >💬 Pedir por WhatsApp</a>
             </div>
 
+            <!-- NUEVA PROMOCIÓN: COLONIAS SOY -->
+            <div class="promocion">
+                <img
+                    src="{{ url_for('static', filename='images/promociones/colonias_soy.jpeg') }}"
+                    alt="Set de colonias Yanbal Soy"
+                    loading="lazy"
+                >
+                <h3>Yanbal Colonias Soy — Set x2</h3>
+                <strong>S/ 38.10</strong>
+                <a
+                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20el%20set%20de%20colonias%20Yanbal%20Soy"
+                    class="boton-producto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >💬 Pedir por WhatsApp</a>
+            </div>
+
+            <!-- NUEVA PROMOCIÓN: CCORI RUBÍ + SUERO -->
+            <div class="promocion">
+                <img
+                    src="{{ url_for('static', filename='images/promociones/ccori_rubi_suero.jpeg') }}"
+                    alt="Set Yanbal Ccori Rubí y suero hidratante"
+                    loading="lazy"
+                >
+                <h3>Yanbal Ccori Rubí + suero hidratante — Set x2</h3>
+                <strong>S/ 119.40</strong>
+                <a
+                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20el%20set%20Yanbal%20Ccori%20Rub%C3%AD%20y%20suero"
+                    class="boton-producto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >💬 Pedir por WhatsApp</a>
+            </div>
+
+            <!-- NUEVA PROMOCIÓN: LOCIÓN DE SEDA -->
+            <div class="promocion">
+                <img
+                    src="{{ url_for('static', filename='images/promociones/locion_seda.jpeg') }}"
+                    alt="Set de lociones Yanbal Loción de Seda"
+                    loading="lazy"
+                >
+                <h3>Yanbal Loción de Seda — Set x2</h3>
+                <strong>S/ 38.80</strong>
+                <a
+                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20el%20set%20Yanbal%20Loci%C3%B3n%20de%20Seda"
+                    class="boton-producto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >💬 Pedir por WhatsApp</a>
+            </div>
+
+            <!-- NUEVA PROMOCIÓN: DENDUR + SOLO -->
+            <div class="promocion">
+                <img
+                    src="{{ url_for('static', filename='images/promociones/dendur_solo.jpeg') }}"
+                    alt="Set de perfumes Yanbal Dendur y Solo"
+                    loading="lazy"
+                >
+                <h3>Yanbal Dendur + Solo — Set</h3>
+                <strong>S/ 105.10</strong>
+                <a
+                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20el%20set%20Yanbal%20Dendur%20y%20Solo"
+                    class="boton-producto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >💬 Pedir por WhatsApp</a>
+            </div>
+
+            <!-- NUEVA PROMOCIÓN: 43°N PARALEL + SOLO -->
+            <div class="promocion">
+                <img
+                    src="{{ url_for('static', filename='images/promociones/paralel_solo.jpeg') }}"
+                    alt="Set de perfumes Yanbal 43°N Paralel y Solo"
+                    loading="lazy"
+                >
+                <h3>Yanbal 43°N Paralel + Solo — Set</h3>
+                <strong>S/ 124.10</strong>
+                <a
+                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20el%20set%20Yanbal%2043N%20Paralel%20y%20Solo"
+                    class="boton-producto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >💬 Pedir por WhatsApp</a>
+            </div>
+
+            <!-- NUEVA PROMOCIÓN: YANBAL KIDS -->
+            <div class="promocion">
+                <img
+                    src="{{ url_for('static', filename='images/promociones/yanbal_kids.jpeg') }}"
+                    alt="Yanbal Kids shampoo con extracto de manzanilla de 400 ml"
+                    loading="lazy"
+                >
+                <h3>Yanbal Kids — Shampoo de manzanilla 400 ml</h3>
+                <strong>S/ 19.90</strong>
+                <a
+                    href="https://wa.me/51940646623?text=Hola,%20quiero%20consultar%20por%20el%20shampoo%20Yanbal%20Kids%20de%20400%20ml"
+                    class="boton-producto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >💬 Pedir por WhatsApp</a>
+            </div>
 
         </div>
-
-
     </section>
 
-
 </body>
-
 </html>
