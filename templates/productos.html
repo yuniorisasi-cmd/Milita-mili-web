@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productos - Mili Milita</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         HEADER
+         ============================== -->
+
+    <header class="header-principal">
+
+        <div class="header-contenedor">
+
+
+            <a href="/" class="logo-contenedor">
+
+                <img
+                    src="{{ url_for('static', filename='images/logo.png') }}"
+                    alt="Logo de Mili Milita"
+                    class="logo"
+                >
+
+            </a>
+
+
+            <nav>
+
+                <a href="/">
+                    Inicio
+                </a>
+
+                <a href="/productos" class="activo">
+                    Productos
+                </a>
+
+                <a href="/#promociones">
+                    Promociones
+                </a>
+
+                <a href="/marcas">
+                    Marcas
+                </a>
+
+                <a href="/contacto">
+                    Contacto
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==============================
+         PRODUCTOS
+         ============================== -->
+
+    <section class="productos">
+
+
+        <h2>
+            Nuestros productos
+        </h2>
+
+
+        <p class="subtitulo">
+            Encuentra tus perfumes y productos favoritos.
+        </p>
+
+
+
+        <!-- BUSCADOR -->
+
+        <div class="buscador">
+
+            <input
+                type="text"
+                id="buscadorProducto"
+                placeholder="Buscar producto..."
+            >
+
+        </div>
+
+
+
+        <!-- FILTROS -->
+
+        <div class="filtros">
+
+            <button onclick="filtrarProductos('Todos')">
+                Todos
+            </button>
+
+            <button onclick="filtrarProductos('Perfumes')">
+                Perfumes
+            </button>
+
+            <button onclick="filtrarProductos('Maquillaje')">
+                Maquillaje
+            </button>
+
+            <button onclick="filtrarProductos('Cuidado personal')">
+                Cuidado personal
+            </button>
+
+        </div>
+
+
+
+        <!-- LISTA DE PRODUCTOS -->
+
+        <div class="productos-contenedor">
+
+
+            {% for producto in productos %}
+
+
+            <div
+                class="producto"
+                data-categoria="{{ producto.categoria }}"
+            >
+
+
+                <img
+                    src="{{ url_for('static', filename='images/' + producto.imagen) }}"
+                    alt="{{ producto.nombre }}"
+                    class="imagen-producto"
+                >
+
+
+                <h3>
+                    {{ producto.nombre }}
+                </h3>
+
+
+                <small>
+                    {{ producto.categoria }}
+                </small>
+
+
+                <p>
+                    {{ producto.descripcion }}
+                </p>
+
+
+                <strong>
+                    {{ producto.precio }}
+                </strong>
+
+
+                <a
+                    href="https://wa.me/51940646623?text={{ ('Hola, quiero consultar por el ' ~ producto.nombre)|urlencode }}"
+                    class="boton-producto"
+                    target="_blank"
+                >
+                    💬 Consultar por WhatsApp
+                </a>
+
+
+            </div>
+
+
+            {% endfor %}
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==============================
+         BUSCADOR Y FILTROS
+         ============================== -->
+
+    <script>
+
+        let categoriaActual = "Todos";
+
+
+        function mostrarProductos() {
+
+            const texto =
+                document
+                .getElementById("buscadorProducto")
+                .value
+                .toLowerCase();
+
+
+            const productos =
+                document.querySelectorAll(".producto");
+
+
+            productos.forEach(function(producto) {
+
+
+                const categoriaProducto =
+                    producto.getAttribute("data-categoria");
+
+
+                const nombreProducto =
+                    producto
+                    .querySelector("h3")
+                    .textContent
+                    .toLowerCase();
+
+
+                const coincideCategoria =
+                    categoriaActual === "Todos" ||
+                    categoriaProducto === categoriaActual;
+
+
+                const coincideBusqueda =
+                    nombreProducto.includes(texto);
+
+
+                if (
+                    coincideCategoria &&
+                    coincideBusqueda
+                ) {
+
+                    producto.style.display = "flex";
+
+                } else {
+
+                    producto.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+
+        function filtrarProductos(categoria) {
+
+            categoriaActual = categoria;
+
+            mostrarProductos();
+
+        }
+
+
+
+        const buscador =
+            document.getElementById("buscadorProducto");
+
+
+        buscador.addEventListener(
+            "input",
+            function() {
+
+                mostrarProductos();
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marcas - Mili Milita</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="header-principal">
+
+        <div class="header-contenedor">
+
+            <a href="/" class="logo-contenedor">
+
+                <img
+                    src="{{ url_for('static', filename='images/logo.png') }}"
+                    alt="Logo de Mili Milita"
+                    class="logo"
+                >
+
+            </a>
+
+            <nav>
+
+                <a href="/">Inicio</a>
+
+                <a href="/productos">
+                    Productos
+                </a>
+
+                <a href="/#promociones">
+                    Promociones
+                </a>
+
+                <a href="/marcas" class="activo">
+                    Marcas
+                </a>
+
+                <a href="/contacto">
+                    Contacto
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <section class="marcas pagina-marcas">
+
+        <h2>
+            Nuestras marcas
+        </h2>
+
+        <p class="subtitulo">
+            Encuentra tus marcas favoritas en Mili Milita.
+        </p>
+
+
+        <div class="marcas-contenedor">
+
+            <div class="marca">
+                <h3>Ésika</h3>
+            </div>
+
+            <div class="marca">
+                <h3>L'Bel</h3>
+            </div>
+
+            <div class="marca">
+                <h3>Yanbal</h3>
+            </div>
+
+            <div class="marca">
+                <h3>Natura</h3>
+            </div>
+
+            <div class="marca">
+                <h3>Avon</h3>
+            </div>
+
+            <div class="marca">
+                <h3>Cyzone</h3>
+            </div>
+
+            <div class="marca">
+                <h3>Dupree</h3>
+            </div>
+
+            <div class="marca">
+                <h3>Leonisa</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

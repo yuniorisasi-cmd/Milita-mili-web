@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto - Mili Milita</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="header-principal">
+
+    <div class="header-contenedor">
+
+        <a href="/" class="logo-contenedor">
+            <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="Logo de Mili Milita"
+                class="logo"
+            >
+        </a>
+
+        <nav>
+            <a href="/">Inicio</a>
+
+            <a href="/productos">
+                Productos
+            </a>
+
+            <a href="/#promociones">
+                Promociones
+            </a>
+
+            <a href="/marcas">
+                Marcas
+            </a>
+
+            <a href="/contacto" class="activo">
+                Contacto
+            </a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="contacto pagina-contacto">
+
+    <h2>Estamos para ayudarte</h2>
+
+    <p>
+        Encuentra tus productos favoritos de belleza,
+        perfumería y cuidado personal.
+        Visítanos en nuestra tienda o escríbenos
+        para consultar disponibilidad, precios
+        y promociones.
+    </p>
+
+
+    <div class="contacto-contenedor">
+
+
+        <!-- UBICACIÓN -->
+
+        <div class="contacto-tarjeta">
+
+            <div class="contacto-icono">
+                📍
+            </div>
+
+            <h3>Visítanos</h3>
+
+            <p>
+                Mercado 3 de Enero
+                <br>
+                Av. Perú 4298
+                <br>
+                Lima, Perú
+            </p>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Mercado%203%20de%20Enero%2C%20Av.%20Per%C3%BA%204298%2C%20Lima%2C%20Per%C3%BA"
+                class="boton-contacto"
+                target="_blank"
+            >
+                🗺️ Cómo llegar
+            </a>
+
+        </div>
+
+
+        <!-- WHATSAPP -->
+
+        <div class="contacto-tarjeta">
+
+            <div class="contacto-icono">
+                📱
+            </div>
+
+            <h3>WhatsApp</h3>
+
+            <p>
+                ¿Tienes alguna consulta?
+                <br>
+                Escríbenos directamente.
+            </p>
+
+            <a
+                href="https://wa.me/51940646623"
+                class="boton-whatsapp"
+                target="_blank"
+            >
+                💬 Escribir por WhatsApp
+            </a>
+
+        </div>
+
+
+        <!-- FACEBOOK -->
+
+        <div class="contacto-tarjeta">
+
+            <div class="contacto-icono">
+                📘
+            </div>
+
+            <h3>Facebook</h3>
+
+            <p>
+                Síguenos y descubre nuestras
+                novedades, productos y promociones.
+            </p>
+
+            <a
+                href="https://www.facebook.com/share/1Dn52qUXmC/"
+                class="boton-facebook"
+                target="_blank"
+            >
+                📘 Visitar Facebook
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- SECCIÓN FINAL -->
+
+    <div class="contacto-final">
+
+        <h3>¿Buscas algo en especial?</h3>
+
+        <p>
+            Explora nuestro catálogo y descubre
+            nuestros perfumes, productos de belleza
+            y artículos de cuidado personal.
+        </p>
+
+        <a
+            href="/productos"
+            class="boton-catalogo"
+        >
+            🛍️ Ver nuestro catálogo
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+</html>
